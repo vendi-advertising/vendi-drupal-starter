@@ -1,0 +1,32 @@
+.faq-set {
+    margin: 3em 0 4em 6em;
+}
+
+.faq-set .question,
+.faq-set .answer {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+}
+
+.faq-set .question {
+    color: var(--color-brand-blue);
+}
+
+.faq-set .answer {
+    float: right;
+}
+
+@media screen and (max-width: 980px) {
+
+    .faq-set {
+        margin: 3em 0 4em;
+    }
+
+    .faq-set .question, .faq-set .answer {
+        display: block;
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+}

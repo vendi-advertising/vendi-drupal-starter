@@ -1,0 +1,75 @@
+.paragraph--unpublished {
+    background-color: #fff;
+}
+
+.paragraph--type--copy-and-form {
+    max-width: var(--content-width-normal);
+    margin: 0 auto;
+    padding: 5em 0;
+    display: flex;
+    column-gap: 7em;
+}
+
+.paragraph--type--copy-and-form .content {
+    width: 70%;
+}
+
+.paragraph--type--copy-and-form h2 {
+    color: var(--color-brand-blue);
+}
+
+.paragraph--type--copy-and-form .copy-form-form form {
+    padding: 3em 2em;
+    background-color: var(--color-brand-gray-light);
+    border-top: 13px solid var(--color-brand-gray-dark);
+    box-shadow: 1px 1px 8px 1px rgb(51 63 72 / 47%);
+    -webkit-box-shadow: 1px 1px 8px 1px rgb(51 63 72 / 47%);
+    -moz-box-shadow: 1px 1px 8px 1px rgba(51,63,72,0.47);
+}
+
+.paragraph--type--copy-and-form .copy-form-form form label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.paragraph--type--copy-and-form .copy-form-form form input {
+    border: solid 1px var(--color-brand-gray-dark);
+    box-sizing: border-box;
+    box-shadow: none;
+    padding: var(--margin-small);
+    display: block;
+    width: 100%;
+    background-color: var(--color-brand-gray-light);
+}
+
+.paragraph--type--copy-and-form .copy-form-form form input.button {
+    width: auto;
+    padding: 1.5rem 3rem;
+    margin-top: 40px;
+}
+
+.paragraph--type--copy-and-form .copy-form-form form input.button:hover,
+.paragraph--type--copy-and-form .copy-form-form form input.button:focus-visible {
+    background-color: var(--color-primary-black);
+}
+
+@media screen and (max-width: 1040px) {
+
+    .paragraph--type--copy-and-form {
+        max-width: var(--content-width-normal);
+        margin: 0 auto;
+        padding: 4em 15px;
+        display: block;
+    }
+    
+    .paragraph--type--copy-and-form .content {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    .paragraph--type--copy-and-form .copy-form-form {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+}

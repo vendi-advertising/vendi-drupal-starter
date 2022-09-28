@@ -1,0 +1,44 @@
+.page-node-type-staff .layout-content .region-content .block > article {
+    padding: 2rem 8vw 3rem;
+    margin: 0 auto;
+    max-width: var(--content-width-normal);
+    
+}
+
+.page-node-type-staff .staff-inner {
+    display: flex;
+    column-gap: 4rem;
+}
+
+.staff-thumb img {
+    max-width: 220px;
+    height: auto;
+}
+
+@media screen and (max-width: 980px) {
+
+    .page-node-type-staff .staff-inner {
+        display: block;
+    }
+
+    .page-node-type-staff .staff-image-wrap {
+        margin: 0 auto;
+    }
+
+}
+
+.paragraph--type--staff-bio-carousel {
+    padding: 3rem 8vw 4rem;
+    margin: 0 auto;
+
+    max-width: var(--content-width-normal);
+}
+
+.paragraph--type--staff-bio-carousel .staff-name {
+    margin-bottom: 5px;
+}
+
+.paragraph--type--staff-bio-carousel .staff-name a {
+    font-size: 22px;
+    text-decoration: none;
+}

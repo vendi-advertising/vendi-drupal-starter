@@ -1,0 +1,50 @@
+.paragraph--type--stat-block {
+    background-image: url(../images/bkg-stats.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.stats-inner {
+    max-width: var(--content-width-normal);
+    padding: 4em 0;
+    margin: 0 auto;
+}
+
+.stats-inner > div {
+    display: flex;
+    column-gap: 2%;
+}
+
+.stats-inner > div > div {
+    width: 33%;
+    background-color: #fff;
+    text-align: center;
+    padding: 4em 2em 2em;
+    min-height: 235px;
+}
+
+@media screen and (max-width: 1365px) {
+
+    .stats-inner {
+        max-width: none;
+    }
+
+    .stats-inner > div > div {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .stats-inner > div {
+        display: block;
+        column-gap: none;
+    }
+
+    .stats-inner > div > div {
+        margin: 0 auto 2em;
+    }
+
+}

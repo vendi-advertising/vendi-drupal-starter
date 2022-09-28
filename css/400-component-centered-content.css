@@ -1,0 +1,72 @@
+.paragraph--type--centered-content {
+    padding: 3em 0;
+    max-width: var(--content-width-normal);
+    margin: 0 auto;
+}
+
+.paragraph--type--centered-content .centered-content-images {
+    position: relative;
+    max-width: 675px;
+    margin: 0 auto;
+    min-height: 376px;
+    margin-bottom: 3em;
+}
+
+.paragraph--type--centered-content .centered-content-image-left {
+    position: absolute;
+    z-index: 6;
+    bottom: 0;
+    left: 7px;
+}
+
+.paragraph--type--centered-content .centered-content-image-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.paragraph--type--centered-content .centered-content-overlay-image {
+    position: absolute;
+    right: -57px;
+    bottom: -12px;
+    z-index: 9999;
+}
+
+.paragraph--type--centered-content .centered-content-title,
+.paragraph--type--centered-content .centered-content-copy {
+    text-align: center;
+}
+
+.paragraph--type--centered-content .centered-content-copy {
+    margin: 2em auto 3em;
+}
+
+.paragraph--type--centered-content .centered-content-btn {
+    text-align: center;
+}
+
+.paragraph--type--centered-content .centered-content-cta {
+    text-align: center;
+}
+
+.paragraph--type--centered-content .centered-content-cta a {
+    color: #000;
+    text-decoration: none;
+    letter-spacing: .06em;
+    font-weight: 600;
+    transition: all 0.5s ease-out 0s;
+}
+
+.paragraph--type--centered-content .centered-content-cta:hover a,
+.paragraph--type--centered-content .centered-content-cta:focus a {
+    color: #fff;
+}
+
+
+@media screen and (max-width: 980px) {
+
+    .paragraph--type--centered-content .centered-content-copy {
+        padding: 2rem 8vw;
+    }
+
+}

@@ -1,0 +1,41 @@
+.paragraph--type--component-media-block {
+    padding: 0 8vw;
+    max-width: var(--content-width-normal);
+    margin: 0 auto;
+}
+
+.paragraph--type--component-media-block .media-block-wrapper {
+    max-width: var(--content-width-normal);
+}
+
+.paragraph--type--component-media-block .media-block-body,
+.paragraph--type--component-media-block .media-block-file,
+.paragraph--type--component-media-block .media-block-image,
+.paragraph--type--component-media-block .media-block-video {
+    margin-bottom: 4rem;
+}
+
+.paragraph--type--component-media-block .media-block-file .file--application-pdf {
+    background-image: none;
+    padding-left: 0;
+}
+
+.paragraph--type--component-media-block .media-block-image {
+    text-align: center;
+}
+
+.paragraph--type--component-media-block .media-block-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.paragraph--type--component-media-block .media-block-file svg {
+    width: 15px;
+    margin-right: 10px;
+}
+
+.paragraph--type--component-media-block .media-block-file .file-link-title {
+    display: inline;
+    vertical-align: text-bottom;
+    width: 100%;
+}

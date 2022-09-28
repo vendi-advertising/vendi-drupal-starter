@@ -1,0 +1,114 @@
+/* general */
+.paragraph--type--copy-and-image {
+    display: flex;
+
+}
+
+.paragraph--type--copy-and-image.overlap-Yes {
+    margin-top: -120px;
+}
+
+.paragraph--type--copy-and-image .copy-image-col-left {
+    padding: 6em 0 6em 14%;
+    position: relative;
+    flex-grow: 1;
+    margin-right: var(--margin-large);
+    flex-basis: 86%;
+}
+
+.paragraph--type--copy-and-image .copy-image-col-right {
+    flex-basis: 56%;
+    margin-bottom: 6em;
+}
+
+.paragraph--type--copy-and-image .copy-image-col-right .test-regular img {
+    max-width: 300px;
+    height: auto;
+    margin-top: 6em;
+}
+
+.paragraph--type--copy-and-image .copy-image-col-right .test-image {
+    border-bottom: 13px solid var(--color-brand-navy-medium);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 600px;
+}
+
+.paragraph--type--copy-and-image.overlap-Yes .copy-image-col-left {
+    padding-top: 0;
+}
+
+.paragraph--type--copy-and-image .copy-image-col-right {
+    position: relative;
+}
+
+.paragraph--type--copy-and-image .copy-image-col-right .test-svg-image {
+    width: 600px;
+    margin-left: -200px;
+}
+
+.paragraph--type--copy-and-image .copy-image-headline {
+    max-width: 78%;
+}
+
+.copy-image-body {
+    max-width: 67%;
+    margin-bottom: 1em;
+}
+
+.copy-image-button a {
+    color: black;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-decoration: none;
+    transition: all 0.5s ease-out 0s;
+}
+
+.copy-image-button:hover a,
+.copy-image-button:focus a {
+    color: #fff;
+}
+
+@media (max-width: 1280px) {
+
+
+
+    .paragraph--type--copy-and-image.overlap-Yes {
+        margin-top: 0;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .paragraph--type--copy-and-image {
+        display: block;
+    }
+
+    .paragraph--type--copy-and-image .copy-image-col-left {
+        padding: 3em;
+    }
+
+    .paragraph--type--copy-and-image .copy-image-headline,
+    .copy-image-body {
+        max-width: 100%;
+    }
+
+    .test-svg-image {
+        margin: 0 auto;
+    }
+
+    .paragraph--type--copy-and-image .copy-image-col-right .test-svg-image {
+        margin-left: auto;
+        width: 400px;
+    }
+
+
+
+}
+
+

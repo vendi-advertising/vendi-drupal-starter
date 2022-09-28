@@ -1,0 +1,18 @@
+vendi.mobile:
+  label: mobile
+  mediaQuery: '(max-width: 768px)'
+  weight: 0
+  multipliers:
+   - 1x
+vendi.tablet:
+  label: tablet
+  mediaQuery: '(max-width: 1024px)'
+  weight: 1
+  multipliers:
+    - 1x
+vendi.narrow:
+  label: normal
+  mediaQuery: 'all and (min-width: 1025px)'
+  weight: 1
+  multipliers:
+    - 1x

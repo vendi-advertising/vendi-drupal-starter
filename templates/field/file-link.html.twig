@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Theme override for a link to a file.
+ *
+ * Available variables:
+ * - attributes: The HTML attributes for the containing element.
+ * - link: A link to the file.
+ * - icon: The icon image representing the file type.
+ * - file_size: The size of the file.
+ *
+ * @see template_preprocess_file_link()
+ * @see stable_preprocess_image_widget()
+ */
+#}
+{{ attach_library('classy/file') }}
+<span{{ attributes }}><a href="{{ link['#url'] }}" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 20" fill="currentColor"><path d="M10 0H2C.9 0 0 .9 0 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6l-6-6zm2 16H4v-2h8v2zm0-4H4v-2h8v2zM9 7V1.5L14.5 7H9z"/></svg><span class="file-link-title">{{ link['#title'] }}</span></a></span>

@@ -1,0 +1,23 @@
+.callout-wrap {
+    background-color: var(--color-brand-gray-light);
+    border-top: 13px solid var(--color-brand-green-light);
+    padding: 3rem;
+}
+
+.callout-wrap .quote-img {
+    text-align: center;
+    color: var(--color-brand-gray-medium);
+    margin: -50px auto 0;
+    height: 156px;
+}
+
+.callout-wrap .callout-text {
+    font-family: var(--font-headline);
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.callout-wrap .callout-author {
+    font-weight: 500;
+}
+

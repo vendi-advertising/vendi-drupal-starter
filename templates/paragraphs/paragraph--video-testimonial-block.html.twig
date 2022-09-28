@@ -1,0 +1,103 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
+ *   - paragraph.id(): The paragraph ID.
+ *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
+ *   - paragraph.getOwnerId(): The user ID of the paragraph author.
+ *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
+ *   and methods for the paragraph object.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div class="video-testimonial-block-wrapper">
+          {% if content.field_video_test_block_headline|render is not empty %}
+              <h2 class="video-testimonial-block-headline">
+                {{ content.field_video_test_block_headline[0]['#value'] }}
+              </h2>
+          {% endif %}
+          <div class="video-testimonial-block-container">
+              <div class="video-testimonial-block-video">
+                <a class="play-video-thumb" href="{{ content.field_video_test_block_video_url[0]['#context']['value'] }}" data-lity>
+                    <img class="video-testimonial-block-thumbnail" src="{{ file_url(content.field_video_test_block_thumbnail[0]['#media'].field_media_image.entity.uri.value) }}" alt="{{ content.field_video_test_block_thumbnail[0]['#media'].field_media_image.alt }}">
+                    <span class="button-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.5 138.5" fill="currentColor"><path d="M55.4 100.4L97 69.3 55.4 38.1v62.3zM69.3 0C31 0 0 31 0 69.3s31 69.3 69.3 69.3 69.3-31 69.3-69.3C138.5 31 107.5 0 69.3 0zm0 124.7c-30.6 0-55.4-24.8-55.4-55.4s24.8-55.4 55.4-55.4 55.4 24.8 55.4 55.4c0 30.6-24.8 55.4-55.4 55.4z"/></svg>
+                    </span>
+                </a>
+              </div>
+              <div class="video-testimonial-block-testimonial-content">
+                  <div class="video-testimonial-block-testimony">
+                    <div class="testimony-quote-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="78" height="272" viewBox="0 0 78 272" fill="currentColor" aria-labelledby="quoteImage" role="img">
+                        <text id="_" data-name="“" transform="translate(0 220)" font-size="227" font-family="ArgentCF-Regular, Argent CF"><tspan x="0" y="0">“</tspan></text>
+                      </svg>
+                    </div>
+                    {{ content.field_video_test_block_testimony }}
+                  </div>
+                  {% if content.field_video_test_block_author|render is not empty %}
+                      <div class="video-testimonial-block-author">
+                        {{ content.field_video_test_block_author[0]['#context']['value'] }}
+                      </div>
+                  {% endif %}
+                  <div class="video-testimonial-block-buttons">
+                      <div class="play-video">
+                      <a class="play-video-button button" href="{{ content.field_video_test_block_video_url[0]['#context']['value'] }}" data-lity>
+                        <span class="button-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.5 138.5" fill="currentColor"><path d="M55.4 100.4L97 69.3 55.4 38.1v62.3zM69.3 0C31 0 0 31 0 69.3s31 69.3 69.3 69.3 69.3-31 69.3-69.3C138.5 31 107.5 0 69.3 0zm0 124.7c-30.6 0-55.4-24.8-55.4-55.4s24.8-55.4 55.4-55.4 55.4 24.8 55.4 55.4c0 30.6-24.8 55.4-55.4 55.4z"/></svg>
+                        </span>
+                        <span class="button-text">
+                            Play video
+                        </span>
+                      </a>
+                      </div>
+                      {% if "Yes" in content.field_video_test_block_successbt.0 %}
+                      <div class="show-all-stories button">
+                          <a href="/outcomes" class="show-all-button">See all success stories</a>
+                      </div>
+                      {% endif %}
+                  </div>
+              </div>
+          </div>
+      </div>
+    {% endblock %}
+  </section>
+{% endblock paragraph %}

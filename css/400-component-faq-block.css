@@ -1,0 +1,17 @@
+.paragraph--type--faq-block {
+    max-width: var(--content-width-normal);
+    margin: var(--margin-large) auto;
+}
+
+.paragraph--type--faq-block h2 {
+    margin-bottom: var(--margin-medium);
+}
+
+@media screen and (max-width: 980px) {
+
+    .paragraph--type--faq-block {
+        margin-top: 0;
+        padding: 2rem 8vw;
+    }
+
+}

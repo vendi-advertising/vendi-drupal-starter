@@ -1,0 +1,186 @@
+/* general */
+.paragraph--type--testimonial {
+    display: flex;
+}
+
+.paragraph--type--testimonial .test-col-left {
+    padding: 4em 0 3em 14%;
+    position: relative;
+    flex-grow: 1;
+    margin-right: var(--margin-medium);
+}
+
+.paragraph--type--testimonial .test-col-right {
+    flex-basis: 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.paragraph--type--testimonial.bkg-image- .test-col-right {
+    display: none;
+    flex-basis: 0;
+}
+
+.paragraph--type--testimonial.bkg-image- .test-col-left {
+    margin-right: 0;
+}
+
+.paragraph--type--testimonial.bkg-image- .test-quote {
+    max-width: 80%;
+}
+
+.paragraph--type--testimonial .test-quote {
+    font-size: 33px;
+    font-family: var(--font-headline);
+    font-weight: 500;
+    max-width: 804px;
+    line-height: 1.3;
+    margin-bottom: var(--margin-medium);
+    position: relative;
+    z-index: 2;
+}
+
+.paragraph--type--testimonial .test-author {
+    color: #fff;
+    font-size: var(--font-body-medium);
+    max-width: 70%;
+}
+
+.paragraph--type--testimonial .test-case-study {
+    display: block;
+    max-width: 300px;
+    margin-top: var(--margin-large);
+}
+
+.paragraph--type--testimonial .test-case-study a,
+.paragraph--type--testimonial .test-case-study {
+    color: #fff;
+    text-decoration: none;
+}
+
+.paragraph--type--testimonial .test-case-study::before {
+    content: ' ';
+    background-image: url(../images/ico-doc.svg);
+    background-repeat: no-repeat;
+    display: block;
+    width: 24px;
+    height: 24px;
+    float: left;
+    margin-top: -4px;
+}
+
+.paragraph--type--testimonial .test-case-study.button {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.paragraph--type--testimonial .test-logo {
+    position: absolute;
+    right: 30px;
+    bottom: 25px;
+    width: 150px;
+    height: auto;
+}
+
+/* orange background  */
+.paragraph--type--testimonial .test-col-left {
+    background-color: var(--color-brand-yellow);
+}
+
+.paragraph--type--testimonial .test-quote {
+    color: var(--color-primary-black);
+}
+
+.paragraph--type--testimonial .test-col-right {
+    border-bottom: 13px solid var(--color-brand-orange);
+}
+
+.paragraph--type--testimonial .test-quote-wrap {
+    position: relative;
+}
+
+.paragraph--type--testimonial .quote-img {
+    position: absolute;
+    left: -99px;
+    top: -66px;
+}
+
+.paragraph--type--testimonial .quote-img svg {
+    width: 150px;
+}
+
+.paragraph--type--testimonial .quote-img {
+    color: #e57506;
+}
+
+.paragraph--type--testimonial .test-case-study.button {
+    background-color: transparent;
+    border: 1px solid black;
+    color: #000;
+}
+
+.paragraph--type--testimonial .test-case-study.button a {
+    color: #000;
+}
+
+.paragraph--type--testimonial .test-case-study.button:hover,
+.paragraph--type--testimonial .test-case-study.button:focus {
+    background-color: black;
+    border: 1px solid black;
+    color: #fff;
+}
+
+.paragraph--type--testimonial .test-case-study.button:hover a,
+.paragraph--type--testimonial .test-case-study.button:focus a {
+    color: #fff;
+}
+
+.paragraph--type--testimonial .test-case-study:hover::before,
+.paragraph--type--testimonial .test-case-study:focus::before {
+    background-image: url(../images/ico-doc.svg);
+}
+
+.paragraph--type--testimonial .test-author {
+    color: #000;
+}
+
+.paragraph--type--testimonial .test-quote::before {
+    background-image: url(../images/quote-orange.svg);
+}
+
+.paragraph--type--testimonial .test-case-study::before {
+    background-image: url(../images/ico-doc-blk.svg);
+}
+
+@media screen and (max-width: 1280px) {
+
+    .paragraph--type--testimonial .test-logo {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: 5rem;
+    }
+
+}
+
+@media screen and (max-width: 1185px) {
+
+    .paragraph--type--testimonial {
+        display: block;
+    }
+
+    .paragraph--type--testimonial .test-col-left {
+        margin-right: 0;
+        padding: 4em;
+    }
+
+    .paragraph--type--testimonial .test-col-right {
+        height: 400px;
+    }
+
+    .paragraph--type--testimonial.bkg-image- .test-quote {
+        max-width: none;
+    }
+
+}

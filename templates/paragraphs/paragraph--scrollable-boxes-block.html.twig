@@ -1,0 +1,146 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
+ *   - paragraph.id(): The paragraph ID.
+ *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
+ *   - paragraph.getOwnerId(): The user ID of the paragraph author.
+ *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
+ *   and methods for the paragraph object.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }} itemscope
+            itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+    {% block content %}
+      <div class="scroll-boxes-inner">
+
+        <div class="boxes-left-col">
+            
+            <div class="text enrollment aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">Enrollment</div>
+
+            <div class="text retention aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">Retention</div>
+
+            <div class="text grad aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">Graduation</div>
+
+
+
+        </div>
+
+        <div class="boxes-right-col">
+
+            <div class="box box1 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+              {% if content.field_boxes_block_headline|render is not empty %}
+                <h2 class="boxes-headline">
+                  {{ content.field_boxes_block_headline[0]['#context']['value'] }}
+                </h2>
+              {% endif %}
+
+              {% if content.field_boxes_block_sub_headline|render is not empty %}
+                <div class="boxes-subheadline">
+                  {{ content.field_boxes_block_sub_headline }}
+                </div>
+              {% endif %}
+
+              {% if content.field_boxes_block_copy|render is not empty %}
+                <div class="boxes-copy">
+                  {{ content.field_boxes_block_copy }}
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="box box2 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+              {% if content.boxes_headline_2|render is not empty %}
+                <h2 class="boxes-headline">
+                  {{ content.boxes_headline_2[0]['#context']['value'] }}
+                </h2>
+              {% endif %}
+
+              {% if content.boxes_subheadline_2|render is not empty %}
+                <div class="boxes-subheadline">
+                  {{ content.boxes_subheadline_2 }}
+                </div>
+              {% endif %}
+
+              {% if content.boxes_copy_2|render is not empty %}
+                <div class="boxes-copy">
+                  {{ content.boxes_copy_2 }}
+                </div>
+              {% endif %}
+            </div>
+
+
+            <div class="box box3 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+              {% if content.boxes_headline_3|render is not empty %}
+                <h2 class="boxes-headline">
+                  {{ content.boxes_headline_3[0]['#context']['value'] }}
+                </h2>
+              {% endif %}
+
+              {% if content.boxes_sub_headline_3|render is not empty %}
+                <div class="boxes-subheadline">
+                  {{ content.boxes_sub_headline_3 }}
+                </div>
+              {% endif %}
+
+              {% if content.boxes_copy_3|render is not empty %}
+                <div class="boxes-copy">
+                  {{ content.boxes_copy_3 }}
+                </div>
+              {% endif %}
+            </div>
+
+          {# {% if content.field_boxes_block_fact_sheet|render is not empty %}
+            <div class="boxes-link button white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" xml:space="preserve" fill="currentColor"><path data-name="Path 28" d="M0 0h24v24H0z" fill="none"/><path data-name="Path 29" d="M19 9h-4V3H9v6H5l7 7zM5 18v2h14v-2z" /></svg>
+              <a href="{{ content.field_boxes_block_fact_sheet[0]['#url'] }}">
+                {{ content.field_boxes_block_fact_sheet[0]['#title'] }}
+              </a>
+            </div>
+          {% endif %} #}
+
+        </div>       
+
+      </div>
+
+    {% endblock %}
+  </section>
+{% endblock paragraph %}

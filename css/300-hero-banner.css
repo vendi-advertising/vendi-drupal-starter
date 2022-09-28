@@ -1,0 +1,177 @@
+.block-views-blockpage-hero-banner-block-1 {
+   
+}
+
+.block-views-blockpage-hero-banner-block-1 .hero-banner-container {
+    position: relative;
+    z-index: 1;
+    padding: 0 8vw 0 8vw;
+    margin: 0 auto;
+}
+
+.block-views-blockpage-hero-banner-block-1 .hero-banner-container::after {
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    height: 12rem;
+    width: 100%;
+    z-index: -1;
+    display: block;
+}
+
+.block-views-blockpage-hero-banner-block-1 .hero-banner-container.hero-banner-border-navy::after {
+    background-color: var(--color-brand-navy-medium);
+}
+
+.block-views-blockpage-hero-banner-block-1 .hero-banner-wrapper {
+    align-items: center;
+    display: flex;
+    max-width: var(--content-width-normal);
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.block-views-blockpage-hero-banner-block-1 .hero-banner .hero-banner-images {
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 9rem;
+    padding-right: 8rem;
+    flex-basis: auto;
+}
+
+.block-views-blockpage-hero-banner-block-1 .hero-banner .hero-banner-images .hero-banner-main-image {
+    transform: scale(0.1);
+    transform-origin: center left;
+    opacity: 0;
+    transition: all 0.5s ease-in 250ms;
+    transition-timing-function: cubic-bezier(.175,.885,.32,1.275);
+}
+
+.block-views-blockpage-hero-banner-block-1 .hero-banner .hero-banner-images .hero-banner-illustration {
+    transform: scale(0.1);
+    transform-origin: center left;
+    opacity: 0;
+    transition: all 0.5s ease-in 500ms;
+    transition-timing-function: cubic-bezier(.175,.885,.32,1.275);
+}
+
+.loaded .block-views-blockpage-hero-banner-block-1 .hero-banner .hero-banner-images .hero-banner-illustration,
+.loaded .block-views-blockpage-hero-banner-block-1 .hero-banner .hero-banner-images .hero-banner-main-image {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.block-views-blockpage-hero-banner-block-1 .hero-banner .hero-banner-images .hero-banner-illustration {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 80%;
+}
+
+.hero-banner-illustration::after {
+    content: '';
+    width: 95%;
+    height: 95%;
+    background-color: rgba(240,240,240,0.7);
+    display: block;
+    position: absolute;
+    bottom: -2rem;
+    left: -2rem;
+    z-index: -1;
+}
+
+.block-views-blockpage-hero-banner-block-1 .hero-banner .hero-banner-images .hero-banner-illustration img {
+    height: auto;
+    width: 100%;
+}
+
+.block-views-blockpage-hero-banner-block-1 .hero-banner .hero-banner-images .hero-banner-main-image img {
+    display: block;
+}
+
+.block-views-blockpage-hero-banner-block-1 .hero-banner .hero-banner-content {
+    box-sizing: border-box;
+    position: relative;
+    padding: 8rem 0 12rem 6rem;
+}
+
+.block-views-blockpage-hero-banner-block-1 .hero-banner .hero-banner-content .hero-pre-header {
+    color: var(--color-brand-yellow);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 1141px ) {
+    
+    .block-views-blockpage-hero-banner-block-1 {
+        padding-top: 3rem;
+    }
+    
+    .block-views-blockpage-hero-banner-block-1 .hero-banner-container::after {
+        display: none;
+    }
+    
+    .block-views-blockpage-hero-banner-block-1 .hero-banner-wrapper {
+        align-items: center;
+    }
+    
+    .block-views-blockpage-hero-banner-block-1 .hero-banner .hero-banner-images {
+        flex-basis: 45%;
+        padding: 6rem 6rem 0 0;
+    }
+   
+    .block-views-blockpage-hero-banner-block-1 .hero-banner .hero-banner-content {
+        flex-basis: 55%;
+        padding: 0 0 0 6rem;
+    }
+    
+    .block-views-blockpage-hero-banner-block-1 .hero-banner .hero-banner-images .hero-banner-main-image img {
+        height: auto;
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    
+    .block-views-blockpage-hero-banner-block-1 {
+        padding-top: 0;
+    }
+    
+    .block-views-blockpage-hero-banner-block-1 .hero-banner-wrapper {
+        display: block;
+        text-align: center;
+    }
+    
+    .block-views-blockpage-hero-banner-block-1 .hero-banner .hero-banner-images {
+        padding: 0 0 2rem 0;
+    }
+    
+    .block-views-blockpage-hero-banner-block-1 .hero-banner .hero-banner-images .hero-banner-main-image {
+        display: none;
+    }
+    
+    .block-views-blockpage-hero-banner-block-1 .hero-banner .hero-banner-images .hero-banner-illustration {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .block-views-blockpage-hero-banner-block-1 .hero-banner .hero-banner-images .hero-banner-illustration::after {
+        display: none;
+    }
+    
+    .block-views-blockpage-hero-banner-block-1 .hero-banner .hero-banner-content {
+        padding: 0;
+    }
+    
+}

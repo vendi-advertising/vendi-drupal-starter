@@ -1,0 +1,28 @@
+name: Vendi Drupal Theme
+description: This is a custom Vendi theme.
+type: theme
+core_version_requirement: 9.x
+base theme: false
+
+screenshot: screenshot.png
+
+libraries:
+  - vendi/global-css
+  - vendi/global-js
+  
+regions:
+  header: 'Header'
+  search_dock: 'Search dock'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  help: 'Help'
+  highlighted: 'Highlighted'
+  breadcrumb: 'Breadcrumb'
+  page_top: 'Page top'
+  sidebar_first: 'Left sidebar'
+  content: 'Content'
+  sidebar_second: 'Right sidebar'
+  page_bottom: 'Page bottom'
+  footer_first: 'Footer left'
+  footer: 'Footer'
+  footer_second: 'Footer right'

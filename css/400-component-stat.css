@@ -1,0 +1,38 @@
+.stat-wrap {
+    text-align: center;
+}
+
+.stat-wrap .stat-amount {
+    font-size: 70px;
+    font-family: var(--font-headline);
+    font-weight: 500;
+    display: inline-block;
+}
+
+.stat-wrap .stat-amount-what {
+    font-size: 46px;
+    font-weight: 500;
+    font-family: var(--font-headline);
+    color: var(--color-brand-blue);
+}
+
+.stat-wrap .stat-amount-detail {
+    display: inline-block;
+}
+
+.stat-wrap .stat-amount-detail,
+.stat-wrap .stat-amount-third-line {
+    font-size: 19px;
+    font-weight: 500;
+    font-family: var(--font-headline);
+}
+
+.stat-wrap .stat-amount-fourth-line {
+    font-size: 13px;
+    font-family: var(--font-headline);
+}
+
+.stat-wrap > div {
+    line-height: 1;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,47 @@
+global-css:
+   css:
+    theme:
+     css/000-reset.css: {}
+     css/010-vars.css: {}
+     css/100-main.css: {}
+     css/101-wysiwyg-editor-styles.css: {}
+     css/200-header.css: {}
+     css/300-hero-banner.css: {}
+     css/201-home-hero-banner.css: {}
+     css/320-staff.css: {}
+     css/400-component-articles.css: {}
+     css/400-component-basic-copy-block.css: {}
+     css/400-component-callout.css: {}
+     css/400-component-centered-content.css: {}
+     css/400-component-copy-and-form.css: {}
+     css/400-component-copy-and-image.css: {}
+     css/400-component-data.css: {}
+     css/400-component-faq.css: {}
+     css/400-component-faq-block.css: {}
+     css/400-component-form-block.css: {}
+     css/400-component-grid-columns.css: {}
+     css/400-component-graphic.css: {}
+     css/400-component-highlight.css: {}
+     css/400-component-media-block.css: {}
+     css/400-component-partners.css: {}
+     css/400-component-scrollable-boxes.css: {}
+     css/400-component-stat.css: {}
+     css/400-component-stat-block.css: {}
+     css/400-component-testimonial.css: {}
+     css/400-component-video-testimonial-block.css: {}
+     css/400-component-webinars.css: {}
+     css/400-component-webinar-panelist.css: {}
+     css/900-footer.css: {}
+     css/aos.css: {}
+     css/lity.min.css: {}
+
+global-js:
+    js:
+        js/aos.js: {}
+        js/scripts.js: {}
+        js/searchbar.js: {}
+        #        js/staff-carousel.js: {}
+        js/header-scroll-shrink.js: {}
+        js/lity.min.js: {}
+        js/scroll-boxes.js: {}
+        

@@ -1,0 +1,198 @@
+/*** use this file to apply global and custom styles for the WYSIWYG editor ****/
+
+/*** begin global full format styles ***/
+
+.wysiwyg-full-format ul {
+    overflow: hidden;
+}
+
+.wysiwyg-full-format .media--type-image,
+.wysiwyg-full-format .media--type-document {
+    margin: 2rem 0;
+}
+
+.wysiwyg-full-format .media--type-image img {
+    display: block;
+}
+
+.wysiwyg-full-format .media--type-image.media--view-mode-wysiwyg-media-image img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.wysiwyg-full-format .media--type-image.align-center img {
+    margin: 0 auto;
+}
+
+.wysiwyg-full-format .media--type-image.align-left,
+.wysiwyg-full-format .media--type-document.align-left {
+    margin: 0rem 4rem 4rem 0;
+}
+
+.wysiwyg-full-format .media--type-image.align-right,
+.wysiwyg-full-format .media--type-document.align-right {
+    margin: 4rem 0 4rem 4rem;
+}
+
+.wysiwyg-full-format .media--type-document.align-center {
+    text-align: center;
+}
+
+.wysiwyg-full-format .media--type-document .file {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    background: none;
+    padding-left: 0;
+    background-image: none;
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--font-main);
+    font-size: var(--font-body);
+    font-weight: 400;
+    line-height: 1.1;
+    padding: 1.5rem 3rem;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.5s ease-out 0s;
+    width: auto;
+    z-index: 0;
+}
+
+.wysiwyg-full-format .media--type-document .file:hover {
+    background-color: var(--color-primary-black);
+    color: var(--color-primary-white);
+}
+
+.wysiwyg-full-format .media--type-document a {
+    color: var(--color-primary-black);
+    font-size: 0;
+    text-decoration: none;
+}
+
+.wysiwyg-full-format .media--type-document .file:hover a {
+    color: var(--color-primary-white);
+}
+
+.file-link-title {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 35px);
+    font-size: var(--font-body);
+    text-align: left;
+}
+
+.wysiwyg-full-format .media--type-document svg {
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* begin global caption styles */
+
+.wysiwyg-full-format figure.caption {
+    margin: 4rem 0;
+    width: 100%;
+}
+
+.wysiwyg-full-format figure.caption .media--type-image,
+.wysiwyg-full-format figure.caption .media--type-document {
+    margin: 0;
+}
+
+.wysiwyg-full-format figure.caption figcaption {
+    font-size: var(--font-body-small);
+    font-style: italic;
+    line-height: 1.4;
+    margin: 1.5rem 0.5rem 0 0.5rem;
+}
+
+.wysiwyg-full-format figure.caption .media--type-image.media--view-mode-wysiwyg-half-width-media-image + figcaption {
+    max-width: 390px;
+}
+
+.wysiwyg-full-format figure.caption .media--type-image.media--view-mode-wysiwyg-thumbnail-media-image + figcaption {
+    max-width: 220px;
+}
+
+.wysiwyg-full-format figure.caption.align-right {
+    margin: 4rem 0 4rem 4rem;
+    width: auto;
+}
+
+.wysiwyg-full-format figure.caption.align-right .media--type-image,
+.wysiwyg-full-format figure.caption.align-right .media--type-document {
+    margin: 0;
+}
+
+.wysiwyg-full-format figure.caption.align-left {
+    margin: 4rem 4rem 4rem 0; 
+    width: auto;
+}
+
+.wysiwyg-full-format figure.caption.align-left .media--type-image,
+.wysiwyg-full-format figure.caption.align-left .media--type-document {
+    margin: 0;
+}
+
+.wysiwyg-full-format figure.caption.align-center {
+    margin: 4rem auto;
+    width: auto;
+}
+
+.wysiwyg-full-format figure.caption.align-center img {
+    margin: 0 auto;
+}
+
+.wysiwyg-full-format figure.caption.align-center .media--type-image {
+    margin: 0;
+}
+
+/* end caption styles */
+
+@media (max-width: 768px) {
+    
+    .wysiwyg-full-format ul {
+        overflow: visible;
+    }
+    
+    .wysiwyg-full-format .media--type-image img {
+        height: auto;
+        width: 100%;
+    }
+    
+    .wysiwyg-full-format .media--type-image.align-left,
+    .wysiwyg-full-format .media--type-document.align-left {
+        float: none;
+        margin: 4rem 0;
+    }
+
+    .wysiwyg-full-format .media--type-image.align-right,
+    .wysiwyg-full-format .media--type-document.align-right {
+        float: none;
+        margin: 4rem 0;
+    }
+    
+    .wysiwyg-full-format figure.caption.align-right {
+        float: none;
+        margin: 4rem 0; 
+    }
+    
+    .wysiwyg-full-format figure.caption.align-left {
+        float: none;
+        margin: 4rem 0; 
+    }
+    
+    .wysiwyg-full-format figure.caption .media--type-image.media--view-mode-wysiwyg-half-width-media-image + figcaption,
+    .wysiwyg-full-format figure.caption .media--type-image.media--view-mode-wysiwyg-thumbnail-media-image + figcaption {
+        max-width: none;
+    }
+    
+}
+
+/*** end global full format styles ***/

@@ -1,0 +1,55 @@
+.paragraph--type--headline-photo-graphic {
+    margin: 4rem auto;
+    max-width: var(--content-width-normal);
+}
+
+.paragraph--type--headline-photo-graphic h2 {
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+.paragraph--type--headline-photo-graphic .graphic-image-area {
+    position: relative;
+}
+
+.paragraph--type--headline-photo-graphic img {
+    max-width: 100%;
+    height: auto;
+}
+
+.paragraph--type--headline-photo-graphic .graphic-graphic {
+    max-width: 400px;
+    position: absolute;
+    right: -39px;
+    bottom: -80px;
+    height: auto;
+    width: 400px;
+}
+
+.paragraph--type--headline-photo-graphic .graphic-links {
+    text-align: center;
+    margin-top: 13rem;
+}
+
+.paragraph--type--headline-photo-graphic .graphic-links a {
+    color: #000;
+}
+
+.paragraph--type--headline-photo-graphic .graphic-link:hover a,
+.paragraph--type--headline-photo-graphic .graphic-link:focus-visible a {
+    color: #fff;
+}
+
+.paragraph--type--headline-photo-graphic .graphic-link.extend {
+    margin-right: 3rem;
+}
+
+@media screen and (max-width: 980px) {
+
+    .paragraph--type--headline-photo-graphic .graphic-graphic {
+        right: 5px;
+        max-width: 150px;
+        bottom: -80px;
+    }
+
+}

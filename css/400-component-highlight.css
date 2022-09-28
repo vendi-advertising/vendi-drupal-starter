@@ -1,0 +1,43 @@
+.paragraph--type--highlight-two-columns {
+    background-color: var(--color-brand-navy-medium);
+    color: #fff;
+    padding: 4rem;
+}
+
+.paragraph--type--highlight-two-columns h2 {
+    color: #fff;
+}
+
+.paragraph--type--highlight-two-columns .highlights-wrap {
+    max-width: var(--content-width-normal);
+    margin: 0 auto;
+}
+
+.paragraph--type--highlight-two-columns .highlight-set {
+    display: flex;
+    column-gap: 7rem;
+    margin-bottom: 7rem;
+}
+
+.paragraph--type--highlight-two-columns .highlight-title,
+.paragraph--type--highlight-two-columns .highlight-copy {
+    width: 50%;
+}
+
+.paragraph--type--highlight-two-columns .highlight-copy a{
+    color: #fff;
+}
+
+@media screen and (max-width: 980px) {
+
+    .paragraph--type--highlight-two-columns .highlight-set {
+        display: block;
+    }
+    
+    .paragraph--type--highlight-two-columns .highlight-title,
+    .paragraph--type--highlight-two-columns .highlight-copy {
+        width: 100%;
+    }
+
+
+}
